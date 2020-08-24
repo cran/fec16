@@ -106,7 +106,7 @@ head(results_house)
 We can use this package to address the (non-exhaustive) list of questions: 
 
   1. Which presidential candidate won majority in more states?
-  2. What is the relationship between contributions of candidates and total votes they get? 
+  2. What is the relationship between contributions of candidates and total votes they get?
   3. Which candidate got the most popular vote and how many?
 
 To answer our questions we can make use of some **data wrangling** and **data visualization** techniques. Some examples (addressing the questions above) are shown below:
@@ -157,7 +157,7 @@ We can see that Hillary Clinton earned the most votes.
 
 Here we investigate what kind of relationship, if any, the candidates with over a 1000 votes got with the total contributions they made. We are interested in candidates with an ID number so we can join them with the contribution data set by using `inner_join`.
 
-```{r eval=TRUE, message=FALSE, warning=FALSE}
+```{r eval=FALSE, message=FALSE, warning=FALSE}
 all_contributions <- fec16::read_all_contributions()
 results_by_cand <- left_join(results_house, candidates, by = "cand_id") %>%
   left_join(all_contributions, by = "cand_id") %>%
@@ -169,10 +169,17 @@ results_by_cand <- left_join(results_house, candidates, by = "cand_id") %>%
   filter(sum_votes > 1000)
 head(results_by_cand)
 ```
+```{r eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE}
+# save local .Rdata file to save time on compilation
+# save(results_by_cand, file = "results_by_cand.Rda")
+load(file = "results_by_cand.Rda")
+head(results_by_cand)
+```
+
 
 Next, we plot the contributions and votes on a scatter plot and plot a trend line that would make it easy for us to see the relationship. Since there are outliers in the data, it is best to not use a continuous axis scale in order to see all of the points. 
 
-```{r eval=FALSE, message=FALSE, warning=FALSE}
+```{r eval=TRUE, message=FALSE, warning=FALSE}
 ggplot(results_by_cand, aes(x = contribution, y = sum_votes)) +
   geom_point() +
   scale_x_log10(labels = comma) +

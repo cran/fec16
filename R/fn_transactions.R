@@ -19,8 +19,7 @@ read_all_transactions <- function(n_max = Inf, verbose = interactive()) {
         "https://www.fec.gov/files/bulk-downloads/2016/oth16.zip",
         destdir = tempdir(), cleanup = TRUE
       )
-    )
-    )
+    ))
   } else {
     dir <- usethis::use_zip(
       "https://www.fec.gov/files/bulk-downloads/2016/oth16.zip",

@@ -12,15 +12,14 @@
 #' @import readr
 #' @export
 
-read_all_individuals <- function(n_max = Inf, verbose = interactive()){
+read_all_individuals <- function(n_max = Inf, verbose = interactive()) {
   if (!verbose) {
     invisible(utils::capture.output(
       dir <- usethis::use_zip(
         "https://www.fec.gov/files/bulk-downloads/2016/indiv16.zip",
         destdir = tempdir(), cleanup = TRUE
       )
-    )
-    )
+    ))
   } else {
     dir <- usethis::use_zip(
       "https://www.fec.gov/files/bulk-downloads/2016/indiv16.zip",

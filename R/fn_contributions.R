@@ -15,12 +15,11 @@
 read_all_contributions <- function(n_max = Inf, verbose = interactive()) {
   if (!verbose) {
     invisible(utils::capture.output(
-        dir <- usethis::use_zip(
-          "https://www.fec.gov/files/bulk-downloads/2016/pas216.zip",
-          destdir = tempdir(), cleanup = TRUE
-        )
+      dir <- usethis::use_zip(
+        "https://www.fec.gov/files/bulk-downloads/2016/pas216.zip",
+        destdir = tempdir(), cleanup = TRUE
       )
-    )
+    ))
   } else {
     dir <- usethis::use_zip(
       "https://www.fec.gov/files/bulk-downloads/2016/pas216.zip",
@@ -39,8 +38,11 @@ read_all_contributions <- function(n_max = Inf, verbose = interactive()) {
     col_names = exp_names,
     col_types = cols(
       employer = col_character(),
-      occupation = col_character()),
-    n_max = n_max, delim = "|") %>%
+      occupation = col_character()
+    ),
+    n_max = n_max,
+    delim = "|"
+  ) %>%
     select(-c(employer, occupation, image_num, memo_cd, memo_text, sub_id, file_num)) %>%
     mutate(
       transaction_dt = lubridate::mdy(transaction_dt)

@@ -45,28 +45,34 @@ ggplot(
   ) +
   coord_flip()
 
-## ----eval=TRUE, message=FALSE, warning=FALSE----------------------------------
-all_contributions <- fec16::read_all_contributions()
-results_by_cand <- left_join(results_house, candidates, by = "cand_id") %>%
-  left_join(all_contributions, by = "cand_id") %>%
-  group_by(cand_id, cand_name, cand_pty_affiliation) %>%
-  summarise(
-    sum_votes = sum(general_votes),
-    contribution = sum(transaction_amt)
-  ) %>%
-  filter(sum_votes > 1000)
+## ----eval=FALSE, message=FALSE, warning=FALSE---------------------------------
+#  all_contributions <- fec16::read_all_contributions()
+#  results_by_cand <- left_join(results_house, candidates, by = "cand_id") %>%
+#    left_join(all_contributions, by = "cand_id") %>%
+#    group_by(cand_id, cand_name, cand_pty_affiliation) %>%
+#    summarise(
+#      sum_votes = sum(general_votes),
+#      contribution = sum(transaction_amt)
+#    ) %>%
+#    filter(sum_votes > 1000)
+#  head(results_by_cand)
+
+## ----eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE----------------------
+# save local .Rdata file to save time on compilation
+# save(results_by_cand, file = "results_by_cand.Rda")
+load(file = "results_by_cand.Rda")
 head(results_by_cand)
 
-## ----eval=FALSE, message=FALSE, warning=FALSE---------------------------------
-#  ggplot(results_by_cand, aes(x = contribution, y = sum_votes)) +
-#    geom_point() +
-#    scale_x_log10(labels = comma) +
-#    scale_y_sqrt(labels = comma) +
-#    geom_smooth(method = "auto") +
-#    labs(
-#      title = "Contributions vs. Votes in 2016",
-#      x = "Contributions in US Dollars", y = "Total Votes"
-#    )
+## ----eval=TRUE, message=FALSE, warning=FALSE----------------------------------
+ggplot(results_by_cand, aes(x = contribution, y = sum_votes)) +
+  geom_point() +
+  scale_x_log10(labels = comma) +
+  scale_y_sqrt(labels = comma) +
+  geom_smooth(method = "auto") +
+  labs(
+    title = "Contributions vs. Votes in 2016",
+    x = "Contributions in US Dollars", y = "Total Votes"
+  )
 
 ## ----message=FALSE, warning=FALSE---------------------------------------------
 house_winners <- left_join(results_house, candidates, by = "cand_id") %>%

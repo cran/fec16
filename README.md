@@ -11,6 +11,8 @@ experimental](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https:/
 status](https://r-pkg.org/badges/version/fec16)](https://CRAN.R-project.org/package=fec16)
 [![Travis-CI Build
 Status](https://travis-ci.org/baumer-lab/fec16.svg?branch=master)](https://travis-ci.org/baumer-lab/fec16)
+[![CRAN RStudio mirror
+downloads](https://cranlogs.r-pkg.org/badges/fec16)](https://www.r-pkg.org:443/pkg/fec16)
 <!-- badges: end -->
 
 **fec16** contains data from the [Federal Election Commission
@@ -23,14 +25,22 @@ includes functions that import the full versions.
 
 ## Installation
 
-`fec16` is hosted on GitHub and call be installed by running the
-following:
+Get the latest released version from CRAN:
 
 ``` r
-devtools::install_github("baumer-lab/fec16")
+install.packages("fec16")
+```
+
+Or the development version from GitHub:
+
+``` r
+# If you haven't installed the remotes package yet, do so:
+# install.packages("remotes")
+remotes::install_github("baumer-lab/fec16")
 ```
 
 ``` r
+# Load package
 library(fec16)
 ```
 
@@ -42,22 +52,19 @@ library(fec16)
     2015-2016 election cycle
   - `committees`: committees registered with the FEC during the
     2015-2016 election cycle
-  - `campaigns`: the house/senate current campaigns
-  - `results_house`: the house results of the 2016 general presidential
-    election
-  - `results_senate`: the senate results of the 2016 general
-    presidential election
-  - `results_president`: the final results of the 2016 general
-    presidential election
+  - `campaigns`: the House/Senate current campaigns
+  - `results_house`: the House results of the 2016 general election
+  - `results_senate`: the Senate results of the 2016 general election
+  - `results_president`: the final results of the 2016 general election
   - `pac`: Political Action Committee (PAC) and party summary financial
     information
 
-### Sample Datasets (with 1000 rows each)
+### Sample Datasets (with 1000 random rows each)
 
   - `individuals`: individual contributions to candidates/committees
-    during the 2016 general presidential election
+    during the 2016 election cycle
   - `contributions`: candidates and their contributions from committees
-    during the 2016 general election
+    during the 2016 election cycle
   - `expenditures`: the operating expenditures
   - `transactions`: transactions between committees
 
@@ -69,17 +76,10 @@ calling each function is given for reference. All functions have an
 argument `n_max` which defaults to the entire dataset but the user can
 specify the max length of the dataset to be loaded via this argument.
 
-  - `read_all_individuals()` ~ 1.45GB
-  - `read_all_contributions()` ~ 15.4MB
-  - `read_all_expenditures()` ~ 52.1MB
-  - `read_all_transactions()` ~ 79.2MB
-
-**Note:** When these functions are run in the console, it is helpful to
-know the progress of the download taking place but running these
-functions in a R Markdown document leads to the progress bar of the
-download being printed repeatedly. A possible solution is to wrap the
-function in `invisible(utils::capture.output())` hereby suppressing the
-messages.
+  - `read_all_individuals()` \~ 1.45GB
+  - `read_all_contributions()` \~ 15.4MB
+  - `read_all_expenditures()` \~ 52.1MB
+  - `read_all_transactions()` \~ 79.2MB
 
 ## Examples
 
@@ -100,8 +100,8 @@ data
 #> # A tibble: 2 x 2
 #>   cand_pty_affiliation  size
 #>   <chr>                <int>
-#> 1 DEM                   1258
-#> 2 REP                   1481
+#> 1 DEM                   1270
+#> 2 REP                   1495
 ```
 
 ### Data Visualization

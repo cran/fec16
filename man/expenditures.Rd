@@ -12,7 +12,7 @@ A data frame with 1000 rows and 20 columns:
 report or a termination (T) report}
 \item{rpt_yr}{Report year}
 \item{rpt_tp}{Indicates the type of report filed, listed here:
-\url{https://www.fec.gov/campaign-finance-data/report-type-code-descriptions}}
+\url{https://www.fec.gov/campaign-finance-data/report-type-code-descriptions/}}
 \item{line_num}{Indicates FEC form line number}
 \item{form_tp_cd}{Indicates FEC form type}
 \item{sched_tp_cd}{Schedule type: Schedule B - Itemized disbursements}
@@ -26,7 +26,7 @@ report or a termination (T) report}
 \item{purpose}{Purpose}
 \item{category}{Disbursement category code: 001-012 and 101-107}
 \item{category_desc}{Disbursement Category Code Description,
-listed here: \url{https://www.fec.gov/campaign-finance-data/disbursement-category-code-descriptions}}
+listed here: \url{https://www.fec.gov/campaign-finance-data/disbursement-category-code-descriptions/}}
 \item{entity_tp}{Entity Type:
 
 CAN = Candidate
