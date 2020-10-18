@@ -1,3 +1,9 @@
+# fec16 0.1.2 (2020-10-16)
+
+Resubmission
+
+* Fixed issues with dependencies and imports
+
 # fec16 0.1.1 (2020-08-18)
 
 Resubmission
