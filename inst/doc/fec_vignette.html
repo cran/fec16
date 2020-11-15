@@ -15,6 +15,54 @@
 
 <title>fec16</title>
 
+<style type="text/css">
+a.anchor-section {margin-left: 10px; visibility: hidden; color: inherit;}
+a.anchor-section::before {content: '#';}
+.hasAnchor:hover a.anchor-section {visibility: visible;}
+</style>
+<script>// Anchor sections v1.0 written by Atsushi Yasumoto on Oct 3rd, 2020.
+document.addEventListener('DOMContentLoaded', function() {
+  // Do nothing if AnchorJS is used
+  if (typeof window.anchors === 'object' && anchors.hasOwnProperty('hasAnchorJSLink')) {
+    return;
+  }
+
+  const h = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+
+  // Do nothing if sections are already anchored
+  if (Array.from(h).some(x => x.classList.contains('hasAnchor'))) {
+    return null;
+  }
+
+  // Use section id when pandoc runs with --section-divs
+  const section_id = function(x) {
+    return ((x.classList.contains('section') || (x.tagName === 'SECTION'))
+            ? x.id : '');
+  };
+
+  // Add anchors
+  h.forEach(function(x) {
+    const id = x.id || section_id(x.parentElement);
+    if (id === '') {
+      return null;
+    }
+    let anchor = document.createElement('a');
+    anchor.href = '#' + id;
+    anchor.classList = ['anchor-section'];
+    x.classList.add('hasAnchor');
+    x.appendChild(anchor);
+  });
+});
+</script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -353,6 +401,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <li><code>results_senate</code>: the senate results of the 2016 general presidential election</li>
 <li><code>results_president</code>: the final results of the 2016 general presidential election</li>
 <li><code>pac</code>: Political Action Committee (PAC) and party summary financial information</li>
+<li><code>states</code>: geographical information about the 50 states</li>
 </ul>
 </div>
 <div id="sample-datasets-with-1000-random-rows-each" class="section level3">
@@ -389,12 +438,12 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co">#&gt; # A tibble: 6 x 13</span></a>
 <a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">#&gt;   state district_id cand_id incumbent party primary_votes primary_percent</span></a>
 <a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt;   &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;   &lt;lgl&gt;     &lt;chr&gt;         &lt;dbl&gt;           &lt;dbl&gt;</span></a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; 1 AL    01          H4AL01… TRUE      R             71310          0.601 </span></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt; 2 AL    01          H6AL01… FALSE     R             47319          0.399 </span></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt; 3 AL    02          H0AL02… TRUE      R             78689          0.664 </span></a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt; 4 AL    02          H6AL02… FALSE     R             33015          0.278 </span></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt; 5 AL    02          H6AL02… FALSE     R              6856          0.0578</span></a>
-<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt; 6 AL    02          H6AL02… FALSE     D                NA         NA     </span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; 1 AL    01          H4AL01… TRUE      REP           71310          0.601 </span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt; 2 AL    01          H6AL01… FALSE     REP           47319          0.399 </span></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt; 3 AL    02          H0AL02… TRUE      REP           78689          0.664 </span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt; 4 AL    02          H6AL02… FALSE     REP           33015          0.278 </span></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt; 5 AL    02          H6AL02… FALSE     REP            6856          0.0578</span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt; 6 AL    02          H6AL02… FALSE     DEM              NA         NA     </span></a>
 <a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt; # … with 6 more variables: runoff_votes &lt;dbl&gt;, runoff_percent &lt;dbl&gt;,</span></a>
 <a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt; #   general_votes &lt;dbl&gt;, general_percent &lt;dbl&gt;, won &lt;lgl&gt;, footnotes &lt;chr&gt;</span></a></code></pre></div>
 </div>

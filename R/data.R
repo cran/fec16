@@ -402,3 +402,15 @@
 #'   }
 #' @source <https://www.fec.gov/campaign-finance-data/pac-and-party-summary-file-description/>, updated 2020-03-02
 "pac"
+
+#' US States lookup table
+#' @docType data
+#' @format A data frame with 50 rows and 4 columns:
+#' \describe{
+#'   \item{state}{two-character postal abbreviation}
+#'   \item{state_name}{the name of the state}
+#'   \item{state_region}{coarse region of the country that the state belongs to}
+#'   \item{state_division}{finer region of the country that the state belongs to}
+#'   }
+#' @source \code{\link[datasets]{state}}
+"states"

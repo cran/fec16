@@ -66,6 +66,7 @@ Anyone interested in US politics and elections who wants to use actual data to t
 - `results_senate`: the senate results of the 2016 general presidential election
 - `results_president`: the final results of the 2016 general presidential election
 - `pac`: Political Action Committee (PAC) and party summary financial information
+- `states`: geographical information about the 50 states
 
 ### Sample Datasets (with 1000 random rows each)
 

@@ -1,6 +1,6 @@
 Package: fec16
 Title: Data Package for the 2016 United States Federal Elections
-Version: 0.1.2
+Version: 0.1.3
 Authors@R: c(
     person(given = "Marium",
            family = "Tapal",
@@ -39,10 +39,10 @@ BugReports: https://github.com/baumer-lab/fec16/issues
 RoxygenNote: 7.1.1
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2020-10-17 22:05:50 UTC; mariumtapal
+Packaged: 2020-11-15 21:31:09 UTC; mariumtapal
 Author: Marium Tapal [aut, cre] (<https://orcid.org/0000-0001-5093-6462>),
   Rana Gahwagy [aut],
   Irene Ryan [aut],
   Benjamin S. Baumer [aut] (<https://orcid.org/0000-0002-3279-0516>)
 Repository: CRAN
-Date/Publication: 2020-10-18 04:10:03 UTC
+Date/Publication: 2020-11-15 21:50:02 UTC

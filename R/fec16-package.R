@@ -26,6 +26,8 @@
 #'   \item Transactions From One Committee To Another: [read_all_transactions]
 #' }
 #'
+#' In addition, `fec16` provides the [states] dataset giving geographical information about the 50 states.
+#'
 #' @section Authors:
 #' \itemize{
 #'   \item Marium Tapal: \url{https://github.com/mariumtapal}

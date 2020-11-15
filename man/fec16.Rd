@@ -31,6 +31,8 @@ For the datasets containing samples, full versions can be retrieved via the foll
 \item Operating Expenditures: \link{read_all_expenditures}
 \item Transactions From One Committee To Another: \link{read_all_transactions}
 }
+
+In addition, \code{fec16} provides the \link{states} dataset giving geographical information about the 50 states.
 }
 
 \section{Authors}{
