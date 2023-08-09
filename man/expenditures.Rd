@@ -60,6 +60,6 @@ expenditures
 }
 \description{
 Operating expenditure information for a simple random sample
-of 1000 entries
+of 1000 entries out of 1744187
 }
 \keyword{datasets}

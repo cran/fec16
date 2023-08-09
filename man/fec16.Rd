@@ -9,7 +9,7 @@ The fec16 package provides the following 9 datasets from the Federal Election Co
 }
 \section{Datasets}{
 
-\if{html}{\figure{hex_fec16.png}{options: align = "right" width="45\%" alt="Figure: hex_fec16.png"}}
+\if{html}{\figure{hex_fec16.png}{options: style="float: right" width="45\%" alt="Figure: hex_fec16.png"}}
 \itemize{
 \item Candidates: \link{candidates}
 \item Committees: \link{committees}

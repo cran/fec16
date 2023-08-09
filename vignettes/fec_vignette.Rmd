@@ -27,7 +27,7 @@ The `fec16` package provides tamed relational datasets of the Federal Election C
 
 We wanted to create a data package that is easy to use for people just beginning to learn R, for example, in introductory statistics and data science classes. For this purpose, this package is nice because students and instructors do not need to worry about the unnecessary data wrangling and can immediately use the data for analysis. 
 
-Our package is inspired by [Hadley Wickham's](https://github.com/hadley/nycflights13) `nycflights13` package. We used the data taming principles from [Albert Kim's](https://github.com/rudeboybert/fivethirtyeight) `fivethirtyeight` package, which are explained in detail [here](https://escholarship.org/uc/item/0rx1231m).
+Our package is inspired by [Hadley Wickham's](https://github.com/tidyverse/nycflights13) `nycflights13` package. We used the data taming principles from [Albert Kim's](https://github.com/rudeboybert/fivethirtyeight) `fivethirtyeight` package, which are explained in detail [here](https://escholarship.org/uc/item/0rx1231m).
 
 
 ### Basics of tame data 

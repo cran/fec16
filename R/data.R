@@ -177,11 +177,11 @@
 #' @source <https://www.fec.gov/campaign-finance-data/contributions-individuals-file-description/>, updated 2020-03-02
 "individuals"
 
-#' General Federal Election Results
+#' House Election Results
 #'
 #' @description 2016 House General Election Results
 #'
-#' @format 3 data frames with information about the House, Senate, and Presidential Election results:
+#' @format A data frame with 2110 rows and 13 columns providing information the House election results:
 #' \describe{
 #'   \item{state}{The state of the votes}
 #'   \item{district_id}{District ID}
@@ -197,15 +197,46 @@
 #'   \item{won}{A logical variable: TRUE if candidate won, FALSE if not}
 #'   \item{footnotes}{Footnotes}
 #' }
+#' @seealso [results_senate], [results_president]
 #' @source <https://transition.fec.gov/general/FederalElections2016.shtml>, updated 2020-03-02
 "results_house"
 
-#' @rdname results_house
-#' @description 2016 Senate General Election Results
+#' Senate Election Results
+#'
+#' @description 2016 House General Election Results
+#'
+#' @format A data frame with 377 rows and 10 columns providing information the House election results:
+#' \describe{
+#'   \item{state}{The state of the votes}
+#'   \item{cand_id}{A code assigned to a candidate by the FEC}
+#'   \item{incumbent}{A logical variable: TRUE if incumbent, FALSE if not}
+#'   \item{party}{Party of the candidate}
+#'   \item{primary_votes}{Number of votes in the primary election}
+#'   \item{primary_percent}{Percentage of votes in the primary election}
+#'   \item{general_votes}{Number of votes in the general election}
+#'   \item{general_percent}{Percentage of votes in the general election}
+#'   \item{won}{A logical variable: TRUE if candidate won, FALSE if not}
+#'   \item{footnotes}{Footnotes}
+#' }
+#' @seealso [results_house], [results_president]
+#' @source <https://transition.fec.gov/general/FederalElections2016.shtml>, updated 2020-03-02
 "results_senate"
 
-#' @rdname results_house
-#' @description 2016 Presidential General Election Results
+#' Presidential Election Results
+#'
+#' @description 2016 House General Election Results
+#'
+#' @format A data frame with 619 rows and 6 columns providing information the House election results:
+#' \describe{
+#'   \item{cand_id}{A code assigned to a candidate by the FEC}
+#'   \item{state}{The state of the votes}
+#'   \item{party}{Party of the candidate}
+#'   \item{general_votes}{Number of votes in the general election}
+#'   \item{general_percent}{Percentage of votes in the general election}
+#'   \item{won}{A logical variable: TRUE if candidate won, FALSE if not}
+#' }
+#' @seealso [results_house], [results_senate]
+#' @source <https://transition.fec.gov/general/FederalElections2016.shtml>, updated 2020-03-02
 "results_president"
 
 #' House/Senate Current Campaigns
@@ -248,7 +279,7 @@
 #' Operating Expenditures
 #'
 #' @description Operating expenditure information for a simple random sample
-#' of 1000 entries
+#' of 1000 entries out of 1744187
 #'
 #' @format A data frame with 1000 rows and 20 columns:
 #' \describe{
