@@ -11,11 +11,11 @@ library(scales)
 library(stringr)
 
 ## ----eval=FALSE, message=FALSE, warning=FALSE, include=TRUE-------------------
-#  # The entire expenditures dataset can be accessed by:
-#  all_expenditures <- fec16::read_all_expenditures()
-#  
-#  # The first 30 entries in this dataset can be accessed by:
-#  expenditures_30 <- fec16::read_all_expenditures(n_max = 30)
+# # The entire expenditures dataset can be accessed by:
+# all_expenditures <- fec16::read_all_expenditures()
+# 
+# # The first 30 entries in this dataset can be accessed by:
+# expenditures_30 <- fec16::read_all_expenditures(n_max = 30)
 
 ## -----------------------------------------------------------------------------
 head(results_house)
@@ -46,16 +46,16 @@ ggplot(
   coord_flip()
 
 ## ----eval=FALSE, message=FALSE, warning=FALSE---------------------------------
-#  all_contributions <- fec16::read_all_contributions()
-#  results_by_cand <- left_join(results_house, candidates, by = "cand_id") %>%
-#    left_join(all_contributions, by = "cand_id") %>%
-#    group_by(cand_id, cand_name, cand_pty_affiliation) %>%
-#    summarise(
-#      sum_votes = sum(general_votes),
-#      contribution = sum(transaction_amt)
-#    ) %>%
-#    filter(sum_votes > 1000)
-#  head(results_by_cand)
+# all_contributions <- fec16::read_all_contributions()
+# results_by_cand <- left_join(results_house, candidates, by = "cand_id") %>%
+#   left_join(all_contributions, by = "cand_id") %>%
+#   group_by(cand_id, cand_name, cand_pty_affiliation) %>%
+#   summarise(
+#     sum_votes = sum(general_votes),
+#     contribution = sum(transaction_amt)
+#   ) %>%
+#   filter(sum_votes > 1000)
+# head(results_by_cand)
 
 ## ----eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE----------------------
 # save local .Rdata file to save time on compilation
@@ -94,7 +94,7 @@ ggplot(
   geom_point() +
   labs(
     title = "Not all Congressional Races are the same",
-    fill = "Candidate", x = "Total Votes", "Total Percent"
+    fill = "Candidate", x = "Total Votes", y = "Total Percent"
   ) +
   scale_y_continuous(labels = comma)
 

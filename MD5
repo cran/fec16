@@ -1,4 +1,4 @@
-99a79303f5882726b0386aead5fcf67a *DESCRIPTION
+55c50b199178bfc7cb4736bbf1f9284a *DESCRIPTION
 d004c44314ec81e83e691075d3549d3a *NAMESPACE
 3fc028508c37f953d3d2f4925be0bb16 *NEWS.md
 78a33dce0be3a33b3d6e6e8271e082cc *R/data.R
@@ -9,7 +9,7 @@ e6bca08f72affbbd3a9a8c40aab1ab0e *R/fn_individuals.R
 3e03fc1f4fa0757f72efdfb9aa96e6d7 *R/fn_transactions.R
 b48d24fd1ea78904d28676439088b1a5 *R/globals.R
 a9de28b3ba34ec642ce1659d53f5da42 *README.md
-9642b5d03abec57de75d5a5addcf7a7d *build/vignette.rds
+dd98de0c5518f27c6c321b9c6594b04d *build/vignette.rds
 d7662de89b91ba531c10fe151d5dba81 *data/campaigns.rda
 d96617b049b71e13afe4b0d06e98c011 *data/candidates.rda
 10bcda673622982c7da6c81295c09d05 *data/committees.rda
@@ -22,9 +22,9 @@ d117deb0852ddfcba2ac862cf807fcf5 *data/results_president.rda
 a1601000c7eef57841b993ffd1a148e6 *data/results_senate.rda
 1fa391b650af0a10e00d107f68e36ac3 *data/states.rda
 d9a7c7e3b6ee138c7597440b08caac1d *data/transactions.rda
-822109dbd4002b4dfb6d80f6ccf3fc52 *inst/doc/fec_vignette.R
-3c5680e39c2a13d4dfc29b03c26c8936 *inst/doc/fec_vignette.Rmd
-69f21c3fd11b83f49ff5374c7dd95eb3 *inst/doc/fec_vignette.html
+56dea72394160163a1a4629db602c36c *inst/doc/fec_vignette.R
+3d3ad47b47843bdc37b808ec43a34cc3 *inst/doc/fec_vignette.Rmd
+5c9975b093eb6b285231904fff2eca73 *inst/doc/fec_vignette.html
 b59a6a67b05ad0945bc0228e0b904c42 *inst/fec16-dm.jpeg
 4ea5c55cd0143175643435a640086c16 *inst/fec16-dm_files/htmlwidgets-1.5.2/htmlwidgets.js
 c5ee30a450231d4188fb33185df09f96 *man/campaigns.Rd
@@ -32,7 +32,7 @@ c5ee30a450231d4188fb33185df09f96 *man/campaigns.Rd
 ff43767a3da86f8119222f62f81770ae *man/committees.Rd
 a3a349c312a366ad8a7b8b7e2dbc8008 *man/contributions.Rd
 334ad774b0467dd9876bb173db6d0525 *man/expenditures.Rd
-402dcb25282f1b34f3094004a5bbf1f0 *man/fec16.Rd
+5235692fcd217e8bbc8105dd61b02430 *man/fec16.Rd
 90ba067409a1398843ea1bfa1b572a93 *man/figures/README-cand-plot-1.png
 8365543ee5765024daa1f2313ae61826 *man/figures/README-party-plot-1.png
 181252bd847a89130c00cd4dcb63a224 *man/figures/README-unnamed-chunk-5-1.png
@@ -50,5 +50,5 @@ b10d34cfc2537d85b27dd2745b130535 *man/states.Rd
 51d6a75a5f791f14664cfad2f571a1c8 *man/transactions.Rd
 8556d2d855a42b6c74c52fd1e2a3e48f *tests/testthat.R
 eb08903522f3909034494141b72ad58b *tests/testthat/tests_examples.R
-3c5680e39c2a13d4dfc29b03c26c8936 *vignettes/fec_vignette.Rmd
+3d3ad47b47843bdc37b808ec43a34cc3 *vignettes/fec_vignette.Rmd
 aab15f2c133d94c9ea5cfdf4a8c481d1 *vignettes/results_by_cand.Rda

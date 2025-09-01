@@ -220,7 +220,7 @@ ggplot(
   geom_point() +
   labs(
     title = "Not all Congressional Races are the same",
-    fill = "Candidate", x = "Total Votes", "Total Percent"
+    fill = "Candidate", x = "Total Votes", y = "Total Percent"
   ) +
   scale_y_continuous(labels = comma)
 ```
